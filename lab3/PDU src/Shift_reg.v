@@ -25,15 +25,12 @@ module Shift_reg(
         end
         else if (add)
         begin
-            dout <= {din[27:0], hex[3:0]};
+            dout <= {dout[27:0], hex[3:0]};
         end
         else if (del) 
         begin
-            dout <= {4'b0, din[31:4]};
+            dout <= {4'b0, dout[31:4]};
         end
     end
-
-
-
 endmodule
 
