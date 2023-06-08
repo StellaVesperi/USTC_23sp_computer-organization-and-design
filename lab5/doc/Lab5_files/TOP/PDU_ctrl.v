@@ -34,6 +34,9 @@ module PDU_ctrl(
     output reg cpu_clk,
     input [31:0] current_pc,
     input [31:0] next_pc
+
+    reg [31:0] counter;
+
 );
 
     reg [10:0] main_current_state, main_next_state;
@@ -197,7 +200,8 @@ module PDU_ctrl(
             end
 
             RUN_enter: begin
-                if (current_pc == bp_pc || current_pc > 32'h3fff || current_pc < 32'h2ff0)  // TODO: Add a counter
+                if (current_pc == bp_pc || current_pc > 32'h3fff || current_pc < 32'h2ff0)  
+                    // TODO : Add a counter
                     main_next_state = RUN_done;
                 else if (pc_seg_vld) 
                     main_next_state = SEG_display;

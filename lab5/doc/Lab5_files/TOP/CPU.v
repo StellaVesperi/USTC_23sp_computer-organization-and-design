@@ -27,5 +27,7 @@ module CPU(
     
     // Write your CPU here!
     // You might need to write these modules:
-    //      ALU、RF、Control、Add(Or just add-mode ALU)、And(Or just and-mode ALU)、PCReg、Imm、Branch、Mux、...
+    // ALU、RF、Control、Add(Or just add-mode ALU)、And(Or just and-mode ALU)、PCReg、Imm、Branch、Mux、...
+    
+
 endmodule
